@@ -1,14 +1,13 @@
 import express from "express";
 
-import user from "./user";
+import middleware from "./middleware";
+import router from "./router";
 
 const app = express();
 const port = 8000;
 
-app.use("/user", user);
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+middleware(app).then(() => {
+  router(app);
 });
 
 app.listen(port, () => {

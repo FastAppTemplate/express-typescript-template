@@ -32,7 +32,7 @@ npm run dev:serve
 执行下面的命令，会将 src 中的所有代码编译输出到 dist 目录中
 
 ```bash
-npm run build
+npm run prd:build
 ```
 
 ### Code commit
